@@ -27,7 +27,7 @@ namespace Cloudrip
         private void button4_Click(object sender, EventArgs e)
         {
             CustomMessageBox aboutBox = new CustomMessageBox();
-            aboutBox.Show(Resources.About, ResultSet.OK, Resources.SoftwareName + " v" + Resources.VERSION );
+            aboutBox.Show(Resources.About, ResultSet.OK, Resources.SoftwareName + " v" + Resources.VERSION);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,6 +49,53 @@ namespace Cloudrip
         private void BindSelectionToButton(Button button)
         {
             border_selected.Top = button.Top;
+        }
+        private void Change_MainControl(GroupBox visibleControl)
+        {
+            foreach (Control control in this.Controls.OfType<GroupBox>())
+            {
+                control.Visible = false;
+            }
+
+            visibleControl.Visible = true;
+        }
+
+        private void sideButton_Login_Click(object sender, EventArgs e)
+        {
+            switch (((Button)sender).Text.ToLower())
+            {
+                case "login":
+                    Change_MainControl(groupBox_Login);
+                    break;
+
+                case "home":
+                    Change_MainControl(groupBox_Home);
+                    break;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Change_MainControl(groupBox_Register);
+        }
+
+        private void sideButton_Search_Click(object sender, EventArgs e)
+        {
+            Change_MainControl(groupBox_Search);
+        }
+
+        private void sideButton_Favorites_Click(object sender, EventArgs e)
+        {
+            Change_MainControl(groupBox_Favorites);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sideButton_Login.Text = "Home";
+            sideButton_Login.Image = Cloudrip.Properties.Resources.home;
+            sideButton_Search.Visible = true;
+            sideButton_Favorites.Visible = true;
+            Change_MainControl(groupBox_Home);
         }
     }
 }

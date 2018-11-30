@@ -39,9 +39,33 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.register1 = new Cloudrip.Register();
-            this.login1 = new Cloudrip.Login();
+            this.groupBox_Register = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.register_button_Register = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox_Login = new System.Windows.Forms.GroupBox();
+            this.login_button_Login = new System.Windows.Forms.Button();
+            this.login_button_Register = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox_Search = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox_Favorites = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox_Home = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.sidePanel.SuspendLayout();
+            this.groupBox_Register.SuspendLayout();
+            this.groupBox_Login.SuspendLayout();
+            this.groupBox_Search.SuspendLayout();
+            this.groupBox_Favorites.SuspendLayout();
+            this.groupBox_Home.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -88,6 +112,7 @@
             this.sideButton_Favorites.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sideButton_Favorites.UseVisualStyleBackColor = false;
             this.sideButton_Favorites.Visible = false;
+            this.sideButton_Favorites.Click += new System.EventHandler(this.sideButton_Favorites_Click);
             // 
             // button4
             // 
@@ -140,6 +165,7 @@
             this.sideButton_Search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sideButton_Search.UseVisualStyleBackColor = false;
             this.sideButton_Search.Visible = false;
+            this.sideButton_Search.Click += new System.EventHandler(this.sideButton_Search_Click);
             // 
             // sideButton_Login
             // 
@@ -160,6 +186,7 @@
             this.sideButton_Login.Text = "Login";
             this.sideButton_Login.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sideButton_Login.UseVisualStyleBackColor = false;
+            this.sideButton_Login.Click += new System.EventHandler(this.sideButton_Login_Click);
             // 
             // panel2
             // 
@@ -210,22 +237,243 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // register1
+            // groupBox_Register
             // 
-            this.register1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.register1.Location = new System.Drawing.Point(210, 100);
-            this.register1.Name = "register1";
-            this.register1.Size = new System.Drawing.Size(677, 191);
-            this.register1.TabIndex = 6;
+            this.groupBox_Register.Controls.Add(this.textBox3);
+            this.groupBox_Register.Controls.Add(this.label3);
+            this.groupBox_Register.Controls.Add(this.register_button_Register);
+            this.groupBox_Register.Controls.Add(this.textBox2);
+            this.groupBox_Register.Controls.Add(this.textBox1);
+            this.groupBox_Register.Controls.Add(this.label2);
+            this.groupBox_Register.Controls.Add(this.label4);
+            this.groupBox_Register.Location = new System.Drawing.Point(250, 56);
+            this.groupBox_Register.Name = "groupBox_Register";
+            this.groupBox_Register.Size = new System.Drawing.Size(749, 489);
+            this.groupBox_Register.TabIndex = 7;
+            this.groupBox_Register.TabStop = false;
             // 
-            // login1
+            // textBox3
             // 
-            this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.login1.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
-            this.login1.Location = new System.Drawing.Point(210, 100);
-            this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(668, 173);
-            this.login1.TabIndex = 5;
+            this.textBox3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(318, 220);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.Size = new System.Drawing.Size(324, 23);
+            this.textBox3.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(114, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 23);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Retype password";
+            // 
+            // register_button_Register
+            // 
+            this.register_button_Register.BackColor = System.Drawing.Color.Transparent;
+            this.register_button_Register.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.register_button_Register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(99)))), ((int)(((byte)(100)))));
+            this.register_button_Register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
+            this.register_button_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.register_button_Register.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_button_Register.ForeColor = System.Drawing.Color.White;
+            this.register_button_Register.Image = global::Cloudrip.Properties.Resources.adduser;
+            this.register_button_Register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.register_button_Register.Location = new System.Drawing.Point(442, 249);
+            this.register_button_Register.Name = "register_button_Register";
+            this.register_button_Register.Size = new System.Drawing.Size(200, 55);
+            this.register_button_Register.TabIndex = 18;
+            this.register_button_Register.Text = "Register";
+            this.register_button_Register.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.register_button_Register.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(318, 191);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(324, 23);
+            this.textBox2.TabIndex = 17;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(318, 162);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(324, 23);
+            this.textBox1.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(114, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 23);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(114, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 23);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Username";
+            // 
+            // groupBox_Login
+            // 
+            this.groupBox_Login.Controls.Add(this.login_button_Login);
+            this.groupBox_Login.Controls.Add(this.login_button_Register);
+            this.groupBox_Login.Controls.Add(this.textBox4);
+            this.groupBox_Login.Controls.Add(this.textBox5);
+            this.groupBox_Login.Controls.Add(this.label5);
+            this.groupBox_Login.Controls.Add(this.label6);
+            this.groupBox_Login.Location = new System.Drawing.Point(250, 56);
+            this.groupBox_Login.Name = "groupBox_Login";
+            this.groupBox_Login.Size = new System.Drawing.Size(749, 489);
+            this.groupBox_Login.TabIndex = 8;
+            this.groupBox_Login.TabStop = false;
+            // 
+            // login_button_Login
+            // 
+            this.login_button_Login.BackColor = System.Drawing.Color.Transparent;
+            this.login_button_Login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_button_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(99)))), ((int)(((byte)(100)))));
+            this.login_button_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
+            this.login_button_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_button_Login.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_button_Login.ForeColor = System.Drawing.Color.White;
+            this.login_button_Login.Image = global::Cloudrip.Properties.Resources.login;
+            this.login_button_Login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login_button_Login.Location = new System.Drawing.Point(236, 249);
+            this.login_button_Login.Name = "login_button_Login";
+            this.login_button_Login.Size = new System.Drawing.Size(200, 55);
+            this.login_button_Login.TabIndex = 11;
+            this.login_button_Login.Text = "Login";
+            this.login_button_Login.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.login_button_Login.UseVisualStyleBackColor = false;
+            this.login_button_Login.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // login_button_Register
+            // 
+            this.login_button_Register.BackColor = System.Drawing.Color.Transparent;
+            this.login_button_Register.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_button_Register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(99)))), ((int)(((byte)(100)))));
+            this.login_button_Register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
+            this.login_button_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_button_Register.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_button_Register.ForeColor = System.Drawing.Color.White;
+            this.login_button_Register.Image = global::Cloudrip.Properties.Resources.adduser;
+            this.login_button_Register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login_button_Register.Location = new System.Drawing.Point(442, 249);
+            this.login_button_Register.Name = "login_button_Register";
+            this.login_button_Register.Size = new System.Drawing.Size(200, 55);
+            this.login_button_Register.TabIndex = 10;
+            this.login_button_Register.Text = "New? Click here";
+            this.login_button_Register.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.login_button_Register.UseVisualStyleBackColor = false;
+            this.login_button_Register.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(236, 191);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
+            this.textBox4.Size = new System.Drawing.Size(406, 23);
+            this.textBox4.TabIndex = 9;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(236, 162);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(406, 23);
+            this.textBox5.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(114, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 23);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Password";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(114, 191);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 23);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Username";
+            // 
+            // groupBox_Search
+            // 
+            this.groupBox_Search.Controls.Add(this.label7);
+            this.groupBox_Search.Location = new System.Drawing.Point(250, 56);
+            this.groupBox_Search.Name = "groupBox_Search";
+            this.groupBox_Search.Size = new System.Drawing.Size(749, 489);
+            this.groupBox_Search.TabIndex = 12;
+            this.groupBox_Search.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(252, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(278, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Hier kommt die Suche hin";
+            // 
+            // groupBox_Favorites
+            // 
+            this.groupBox_Favorites.Controls.Add(this.label8);
+            this.groupBox_Favorites.Location = new System.Drawing.Point(250, 56);
+            this.groupBox_Favorites.Name = "groupBox_Favorites";
+            this.groupBox_Favorites.Size = new System.Drawing.Size(749, 489);
+            this.groupBox_Favorites.TabIndex = 13;
+            this.groupBox_Favorites.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(252, 106);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(330, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Hier kommen die Favoriten hin";
+            // 
+            // groupBox_Home
+            // 
+            this.groupBox_Home.Controls.Add(this.label9);
+            this.groupBox_Home.Location = new System.Drawing.Point(250, 56);
+            this.groupBox_Home.Name = "groupBox_Home";
+            this.groupBox_Home.Size = new System.Drawing.Size(749, 489);
+            this.groupBox_Home.TabIndex = 14;
+            this.groupBox_Home.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(252, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(339, 24);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Hier kommt das Homepanel hin";
             // 
             // Form1
             // 
@@ -233,13 +481,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.ClientSize = new System.Drawing.Size(1024, 576);
-            this.Controls.Add(this.register1);
-            this.Controls.Add(this.login1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.groupBox_Login);
+            this.Controls.Add(this.groupBox_Register);
+            this.Controls.Add(this.groupBox_Home);
+            this.Controls.Add(this.groupBox_Favorites);
+            this.Controls.Add(this.groupBox_Search);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -247,6 +498,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.sidePanel.ResumeLayout(false);
+            this.groupBox_Register.ResumeLayout(false);
+            this.groupBox_Register.PerformLayout();
+            this.groupBox_Login.ResumeLayout(false);
+            this.groupBox_Login.PerformLayout();
+            this.groupBox_Search.ResumeLayout(false);
+            this.groupBox_Search.PerformLayout();
+            this.groupBox_Favorites.ResumeLayout(false);
+            this.groupBox_Favorites.PerformLayout();
+            this.groupBox_Home.ResumeLayout(false);
+            this.groupBox_Home.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -263,9 +524,28 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button sideButton_Favorites;
-        private Login login1;
-        private Register register1;
         private System.Windows.Forms.Panel border_selected;
+        private System.Windows.Forms.GroupBox groupBox_Register;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button register_button_Register;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox_Login;
+        private System.Windows.Forms.Button login_button_Login;
+        private System.Windows.Forms.Button login_button_Register;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox_Search;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox_Favorites;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox_Home;
+        private System.Windows.Forms.Label label9;
     }
 }
 
