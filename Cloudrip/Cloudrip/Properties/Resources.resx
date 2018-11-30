@@ -153,10 +153,13 @@ Website: zeziroth.com</value>
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>Error while establishing serverconnection. Please try again later!</value>
+  </data>
   <data name="ServerIP" xml:space="preserve">
     <value>148.251.138.156</value>
   </data>
   <data name="ServerPort" xml:space="preserve">
-    <value>9000</value>
+    <value>50433</value>
   </data>
 </root>

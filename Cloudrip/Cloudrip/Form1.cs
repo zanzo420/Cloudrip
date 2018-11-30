@@ -26,8 +26,7 @@ namespace Cloudrip
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CustomMessageBox aboutBox = new CustomMessageBox();
-            aboutBox.Show(Resources.About, ResultSet.OK, Resources.SoftwareName + " v" + Resources.VERSION);
+            CustomMessageBox.NewMessageBox(Resources.About, ResultSet.OK, Resources.SoftwareName + " v" + Resources.VERSION);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,6 +40,8 @@ namespace Cloudrip
                     button.Click += Register_Sidebar_Selection;
                 }
             }
+
+            TcpClient.Start();
         }
         private void Register_Sidebar_Selection(object sender, EventArgs e)
         {
@@ -91,11 +92,13 @@ namespace Cloudrip
 
         private void button2_Click(object sender, EventArgs e)
         {
-            sideButton_Login.Text = "Home";
-            sideButton_Login.Image = Cloudrip.Properties.Resources.home;
-            sideButton_Search.Visible = true;
-            sideButton_Favorites.Visible = true;
-            Change_MainControl(groupBox_Home);
+            TcpClient.Send("LOGIN");
+
+            //sideButton_Login.Text = "Home";
+            //sideButton_Login.Image = Cloudrip.Properties.Resources.home;
+            //sideButton_Search.Visible = true;
+            //sideButton_Favorites.Visible = true;
+            //Change_MainControl(groupBox_Home);
         }
     }
 }

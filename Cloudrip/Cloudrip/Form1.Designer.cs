@@ -50,8 +50,8 @@
             this.groupBox_Login = new System.Windows.Forms.GroupBox();
             this.login_button_Login = new System.Windows.Forms.Button();
             this.login_button_Register = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.login_textBox_Password = new System.Windows.Forms.TextBox();
+            this.login_textBox_Username = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox_Search = new System.Windows.Forms.GroupBox();
@@ -331,8 +331,8 @@
             // 
             this.groupBox_Login.Controls.Add(this.login_button_Login);
             this.groupBox_Login.Controls.Add(this.login_button_Register);
-            this.groupBox_Login.Controls.Add(this.textBox4);
-            this.groupBox_Login.Controls.Add(this.textBox5);
+            this.groupBox_Login.Controls.Add(this.login_textBox_Password);
+            this.groupBox_Login.Controls.Add(this.login_textBox_Username);
             this.groupBox_Login.Controls.Add(this.label5);
             this.groupBox_Login.Controls.Add(this.label6);
             this.groupBox_Login.Location = new System.Drawing.Point(250, 56);
@@ -381,28 +381,28 @@
             this.login_button_Register.UseVisualStyleBackColor = false;
             this.login_button_Register.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox4
+            // login_textBox_Password
             // 
-            this.textBox4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(236, 191);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(406, 23);
-            this.textBox4.TabIndex = 9;
+            this.login_textBox_Password.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_textBox_Password.Location = new System.Drawing.Point(236, 191);
+            this.login_textBox_Password.Name = "login_textBox_Password";
+            this.login_textBox_Password.PasswordChar = '*';
+            this.login_textBox_Password.Size = new System.Drawing.Size(406, 23);
+            this.login_textBox_Password.TabIndex = 9;
             // 
-            // textBox5
+            // login_textBox_Username
             // 
-            this.textBox5.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(236, 162);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(406, 23);
-            this.textBox5.TabIndex = 8;
+            this.login_textBox_Username.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_textBox_Username.Location = new System.Drawing.Point(236, 162);
+            this.login_textBox_Username.Name = "login_textBox_Username";
+            this.login_textBox_Username.Size = new System.Drawing.Size(406, 23);
+            this.login_textBox_Username.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(114, 162);
+            this.label5.Location = new System.Drawing.Point(114, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 23);
             this.label5.TabIndex = 7;
@@ -412,7 +412,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(114, 191);
+            this.label6.Location = new System.Drawing.Point(114, 162);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 23);
             this.label6.TabIndex = 6;
@@ -536,8 +536,8 @@
         private System.Windows.Forms.GroupBox groupBox_Login;
         private System.Windows.Forms.Button login_button_Login;
         private System.Windows.Forms.Button login_button_Register;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox login_textBox_Password;
+        private System.Windows.Forms.TextBox login_textBox_Username;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox_Search;

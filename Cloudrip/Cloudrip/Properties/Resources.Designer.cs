@@ -82,6 +82,15 @@ namespace Cloudrip.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Error while establishing serverconnection. Please try again later! ähnelt.
+        /// </summary>
+        internal static string ConnectionError {
+            get {
+                return ResourceManager.GetString("ConnectionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap home {
@@ -131,7 +140,7 @@ namespace Cloudrip.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 9000 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 50433 ähnelt.
         /// </summary>
         internal static string ServerPort {
             get {

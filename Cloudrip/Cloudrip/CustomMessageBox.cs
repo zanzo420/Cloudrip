@@ -20,7 +20,11 @@ namespace Cloudrip
         {
             InitializeComponent();
         }
-
+        public static void NewMessageBox(string msg, ResultSet results = ResultSet.OK, string title = "")
+        {
+            CustomMessageBox aboutBox = new CustomMessageBox();
+            aboutBox.Show(msg, results, title);
+        }
         public DialogResult Show(string msg, ResultSet results = ResultSet.OK, string title = "")
         {
             label_title.Text = title;
