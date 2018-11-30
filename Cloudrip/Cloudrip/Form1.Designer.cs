@@ -38,6 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.login1 = new Cloudrip.Login();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,12 +199,22 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // login1
+            // 
+            this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.login1.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
+            this.login1.Location = new System.Drawing.Point(282, 191);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(668, 173);
+            this.login1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.Controls.Add(this.login1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button5);
@@ -232,6 +243,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button6;
+        private Login login1;
     }
 }
 
