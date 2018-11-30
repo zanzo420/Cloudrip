@@ -33,6 +33,22 @@ namespace Cloudrip
         private void Form1_Load(object sender, EventArgs e)
         {
             WindowlessMove.Register_MouseHandler(this);
+
+            foreach (Button button in sidePanel.Controls.OfType<Button>())
+            {
+                if (button.Name.ToLower().StartsWith("sidebutton"))
+                {
+                    button.Click += Register_Sidebar_Selection;
+                }
+            }
+        }
+        private void Register_Sidebar_Selection(object sender, EventArgs e)
+        {
+            BindSelectionToButton((Button)sender);
+        }
+        private void BindSelectionToButton(Button button)
+        {
+            border_selected.Top = button.Top;
         }
     }
 }
