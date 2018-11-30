@@ -61,6 +61,17 @@ namespace Cloudrip.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die TeamSpeak3: zeziroth.com
+        ///Github: https://github.com/Zeziroth/
+        ///Website: zeziroth.com ähnelt.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap information {
@@ -111,12 +122,30 @@ namespace Cloudrip.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Cloudrip ähnelt.
+        /// </summary>
+        internal static string SoftwareName {
+            get {
+                return ResourceManager.GetString("SoftwareName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap star {
             get {
                 object obj = ResourceManager.GetObject("star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die 1.0 ähnelt.
+        /// </summary>
+        internal static string VERSION {
+            get {
+                return ResourceManager.GetString("VERSION", resourceCulture);
             }
         }
     }
