@@ -19,7 +19,7 @@ namespace Cloudrip
         }
         private void Register_OnControl(Control control)
         {
-            if (control.GetType() != typeof(Button))
+            if (control.GetType() != typeof(Button) && control.GetType() != typeof(TextBox))
             {
                 control.MouseDown += MoveWindowless;
             }

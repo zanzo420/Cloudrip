@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WatsonTcp;
@@ -28,7 +26,7 @@ namespace Cloudrip
         
         public static bool IsRunning()
         {
-            return Client.IsConnected();
+            return Client != null && Client.IsConnected();
         }
         public static async void Send(string message)
         {
@@ -36,25 +34,25 @@ namespace Cloudrip
             {
                 
                 await Client.SendAsync(Encoding.UTF8.GetBytes(message));
-                CustomMessageBox.NewMessageBox("Sent");
             }
         }
 
         static bool MessageReceived(byte[] data)
         {
-            CustomMessageBox.NewMessageBox("Message from server: " + Encoding.UTF8.GetString(data));
+            string msg = Encoding.UTF8.GetString(data);
+            dynamic msgJson = Newtonsoft.Json.JsonConvert.DeserializeObject(msg);
+            CustomMessageBox.NewMessageBox("Message from server: " + msg);
             return true;
         }
 
         static bool ServerConnected()
         {
-            CustomMessageBox.NewMessageBox("Server connected");
             return true;
         }
 
         static bool ServerDisconnected()
         {
-            CustomMessageBox.NewMessageBox("Server disconnected");
+            run = false;
             return true;
         }
     }

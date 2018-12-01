@@ -40,11 +40,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox_Register = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.register_textBox_Password2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.register_button_Register = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.register_textBox_Password = new System.Windows.Forms.TextBox();
+            this.register_textBox_Username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox_Login = new System.Windows.Forms.GroupBox();
@@ -219,6 +219,7 @@
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 2;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -239,11 +240,11 @@
             // 
             // groupBox_Register
             // 
-            this.groupBox_Register.Controls.Add(this.textBox3);
+            this.groupBox_Register.Controls.Add(this.register_textBox_Password2);
             this.groupBox_Register.Controls.Add(this.label3);
             this.groupBox_Register.Controls.Add(this.register_button_Register);
-            this.groupBox_Register.Controls.Add(this.textBox2);
-            this.groupBox_Register.Controls.Add(this.textBox1);
+            this.groupBox_Register.Controls.Add(this.register_textBox_Password);
+            this.groupBox_Register.Controls.Add(this.register_textBox_Username);
             this.groupBox_Register.Controls.Add(this.label2);
             this.groupBox_Register.Controls.Add(this.label4);
             this.groupBox_Register.Location = new System.Drawing.Point(250, 56);
@@ -252,14 +253,14 @@
             this.groupBox_Register.TabIndex = 7;
             this.groupBox_Register.TabStop = false;
             // 
-            // textBox3
+            // register_textBox_Password2
             // 
-            this.textBox3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(318, 220);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(324, 23);
-            this.textBox3.TabIndex = 20;
+            this.register_textBox_Password2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_textBox_Password2.Location = new System.Drawing.Point(318, 220);
+            this.register_textBox_Password2.Name = "register_textBox_Password2";
+            this.register_textBox_Password2.PasswordChar = '*';
+            this.register_textBox_Password2.Size = new System.Drawing.Size(324, 23);
+            this.register_textBox_Password2.TabIndex = 20;
             // 
             // label3
             // 
@@ -289,23 +290,24 @@
             this.register_button_Register.Text = "Register";
             this.register_button_Register.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.register_button_Register.UseVisualStyleBackColor = false;
+            this.register_button_Register.Click += new System.EventHandler(this.register_button_Register_Click);
             // 
-            // textBox2
+            // register_textBox_Password
             // 
-            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(318, 191);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(324, 23);
-            this.textBox2.TabIndex = 17;
+            this.register_textBox_Password.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_textBox_Password.Location = new System.Drawing.Point(318, 191);
+            this.register_textBox_Password.Name = "register_textBox_Password";
+            this.register_textBox_Password.PasswordChar = '*';
+            this.register_textBox_Password.Size = new System.Drawing.Size(324, 23);
+            this.register_textBox_Password.TabIndex = 17;
             // 
-            // textBox1
+            // register_textBox_Username
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(318, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 23);
-            this.textBox1.TabIndex = 16;
+            this.register_textBox_Username.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_textBox_Username.Location = new System.Drawing.Point(318, 162);
+            this.register_textBox_Username.Name = "register_textBox_Username";
+            this.register_textBox_Username.Size = new System.Drawing.Size(324, 23);
+            this.register_textBox_Username.TabIndex = 16;
             // 
             // label2
             // 
@@ -526,11 +528,11 @@
         private System.Windows.Forms.Button sideButton_Favorites;
         private System.Windows.Forms.Panel border_selected;
         private System.Windows.Forms.GroupBox groupBox_Register;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox register_textBox_Password2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button register_button_Register;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox register_textBox_Password;
+        private System.Windows.Forms.TextBox register_textBox_Username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox_Login;

@@ -41,7 +41,7 @@ namespace Cloudrip
                 }
             }
 
-            TcpClient.Start();
+            Cloudrip_Client.Connect();
         }
         private void Register_Sidebar_Selection(object sender, EventArgs e)
         {
@@ -92,13 +92,23 @@ namespace Cloudrip
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TcpClient.Send("LOGIN");
+            Cloudrip_Client.Login(login_textBox_Username.Text, login_textBox_Password.Text);
 
             //sideButton_Login.Text = "Home";
             //sideButton_Login.Image = Cloudrip.Properties.Resources.home;
             //sideButton_Search.Visible = true;
             //sideButton_Favorites.Visible = true;
             //Change_MainControl(groupBox_Home);
+        }
+
+        private void register_button_Register_Click(object sender, EventArgs e)
+        {
+            Cloudrip_Client.Register(register_textBox_Username.Text, register_textBox_Password.Text, register_textBox_Password2.Text);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
