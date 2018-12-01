@@ -7,10 +7,6 @@ namespace Cloudrip
 {
     public static class Core
     {
-        public static void hi()
-        {
-
-        }
 
         public static string ToMD5(this string input, string salt)
         {

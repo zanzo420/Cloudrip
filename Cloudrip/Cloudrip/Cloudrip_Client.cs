@@ -13,9 +13,9 @@ namespace Cloudrip
             Token = _token;
         }
 
-        internal static void Connect()
+        internal static void Connect(Form1 form)
         {
-            TcpClient.Start();
+            TcpClient.Start(form);
         }
 
         public static void Login(string username, string password)

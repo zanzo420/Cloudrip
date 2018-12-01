@@ -10,8 +10,11 @@ namespace Cloudrip
     {
         public static WatsonTcpClient Client { get; private set; } = null;
         public static bool run = false;
-        public static async Task Start()
+        public static Form1 mainGUI { get; private set; }
+
+        public static async Task Start(Form1 form)
         {
+            mainGUI = form;
             await Task.Factory.StartNew(() =>
             {
                 try
@@ -41,10 +44,53 @@ namespace Cloudrip
         {
             string msg = Encoding.UTF8.GetString(data);
             dynamic msgJson = Newtonsoft.Json.JsonConvert.DeserializeObject(msg);
-            CustomMessageBox.NewMessageBox("Message from server: " + msg);
+
+                switch (SafeTouch(msgJson.method).ToString())
+                {
+                    case "login":
+                        switch (SafeTouch(msgJson.status).ToString())
+                        {
+                            case "success":
+                                On_Login(true);
+                                break;
+
+                            case "failed":
+                                On_Login(false);
+                                break;
+                        }
+                        break;
+                }
             return true;
         }
 
+        private static dynamic SafeTouch(dynamic val)
+        {
+            if (val != null)
+            {
+                return val;
+            }
+            return "";
+        }
+
+        private static void On_Login(bool state)
+        {
+            if (state)
+            {
+                Invoker.ChangeImage(mainGUI.sideButton_Login, Cloudrip.Properties.Resources.home);
+                Invoker.SetText(mainGUI.sideButton_Login, "Home");
+                Invoker.ChangeVisible(mainGUI.sideButton_Search, true);
+                Invoker.ChangeVisible(mainGUI.sideButton_Favorites, true);
+                mainGUI.Change_MainControl(mainGUI.groupBox_Home);
+            }
+            else
+            {
+                Invoker.ChangeImage(mainGUI.sideButton_Login, Cloudrip.Properties.Resources.login);
+                Invoker.SetText(mainGUI.sideButton_Login, "Login");
+                Invoker.ChangeVisible(mainGUI.sideButton_Search, false);
+                Invoker.ChangeVisible(mainGUI.sideButton_Favorites, false);
+                mainGUI.Change_MainControl(mainGUI.groupBox_Login);
+            }
+        }
         static bool ServerConnected()
         {
             return true;
