@@ -14,6 +14,7 @@ namespace Cloudrip
 
     public partial class Form1 : Form
     {
+        public CloudripUser user = null;
         public Form1()
         {
             InitializeComponent();
@@ -98,126 +99,6 @@ namespace Cloudrip
         private void register_button_Register_Click(object sender, EventArgs e)
         {
             Cloudrip_Client.Register(register_textBox_Username.Text, register_textBox_Password.Text, register_textBox_Password2.Text);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void border_selected_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox_Register_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void register_textBox_Password2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void register_textBox_Password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void register_textBox_Username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sidePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox_Login_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_textBox_Password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_textBox_Username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_Search_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_Favorites_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_Home_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

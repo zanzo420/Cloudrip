@@ -22,7 +22,7 @@ namespace Cloudrip
         {
             dynamic login = Request.NewRequest("login");
             login.username = username;
-            login.password = password.ToMD5(username);
+            login.password = password.ToMD5(username.ToLower());
 
             Request.Send(login);
         }

@@ -59,7 +59,11 @@
             this.groupBox_Favorites = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Home_Label_Welcome = new System.Windows.Forms.Label();
+            this.Search_textBox_Term = new System.Windows.Forms.TextBox();
+            this.Search_listView_Series = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Search_button_search = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             this.groupBox_Register.SuspendLayout();
             this.groupBox_Login.SuspendLayout();
@@ -83,7 +87,6 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(210, 576);
             this.sidePanel.TabIndex = 0;
-            this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
             // border_selected
             // 
@@ -92,7 +95,6 @@
             this.border_selected.Name = "border_selected";
             this.border_selected.Size = new System.Drawing.Size(10, 55);
             this.border_selected.TabIndex = 4;
-            this.border_selected.Paint += new System.Windows.Forms.PaintEventHandler(this.border_selected_Paint);
             // 
             // sideButton_Favorites
             // 
@@ -146,7 +148,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Cloudrip";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // sideButton_Search
             // 
@@ -198,7 +199,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(210, 3);
             this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -207,7 +207,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1024, 50);
             this.panel3.TabIndex = 4;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button5
             // 
@@ -224,7 +223,6 @@
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 2;
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -257,7 +255,6 @@
             this.groupBox_Register.Size = new System.Drawing.Size(749, 489);
             this.groupBox_Register.TabIndex = 7;
             this.groupBox_Register.TabStop = false;
-            this.groupBox_Register.Enter += new System.EventHandler(this.groupBox_Register_Enter);
             // 
             // register_textBox_Password2
             // 
@@ -267,7 +264,6 @@
             this.register_textBox_Password2.PasswordChar = '*';
             this.register_textBox_Password2.Size = new System.Drawing.Size(324, 23);
             this.register_textBox_Password2.TabIndex = 20;
-            this.register_textBox_Password2.TextChanged += new System.EventHandler(this.register_textBox_Password2_TextChanged);
             // 
             // label3
             // 
@@ -278,7 +274,6 @@
             this.label3.Size = new System.Drawing.Size(198, 23);
             this.label3.TabIndex = 19;
             this.label3.Text = "Retype password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // register_button_Register
             // 
@@ -308,7 +303,6 @@
             this.register_textBox_Password.PasswordChar = '*';
             this.register_textBox_Password.Size = new System.Drawing.Size(324, 23);
             this.register_textBox_Password.TabIndex = 17;
-            this.register_textBox_Password.TextChanged += new System.EventHandler(this.register_textBox_Password_TextChanged);
             // 
             // register_textBox_Username
             // 
@@ -317,7 +311,6 @@
             this.register_textBox_Username.Name = "register_textBox_Username";
             this.register_textBox_Username.Size = new System.Drawing.Size(324, 23);
             this.register_textBox_Username.TabIndex = 16;
-            this.register_textBox_Username.TextChanged += new System.EventHandler(this.register_textBox_Username_TextChanged);
             // 
             // label2
             // 
@@ -328,7 +321,6 @@
             this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -339,7 +331,6 @@
             this.label4.Size = new System.Drawing.Size(119, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "Username";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox_Login
             // 
@@ -354,7 +345,6 @@
             this.groupBox_Login.Size = new System.Drawing.Size(749, 489);
             this.groupBox_Login.TabIndex = 8;
             this.groupBox_Login.TabStop = false;
-            this.groupBox_Login.Enter += new System.EventHandler(this.groupBox_Login_Enter);
             // 
             // login_button_Login
             // 
@@ -404,7 +394,6 @@
             this.login_textBox_Password.PasswordChar = '*';
             this.login_textBox_Password.Size = new System.Drawing.Size(406, 23);
             this.login_textBox_Password.TabIndex = 9;
-            this.login_textBox_Password.TextChanged += new System.EventHandler(this.login_textBox_Password_TextChanged);
             // 
             // login_textBox_Username
             // 
@@ -413,7 +402,6 @@
             this.login_textBox_Username.Name = "login_textBox_Username";
             this.login_textBox_Username.Size = new System.Drawing.Size(406, 23);
             this.login_textBox_Username.TabIndex = 8;
-            this.login_textBox_Username.TextChanged += new System.EventHandler(this.login_textBox_Username_TextChanged);
             // 
             // label5
             // 
@@ -424,7 +412,6 @@
             this.label5.Size = new System.Drawing.Size(114, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Password";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -435,28 +422,28 @@
             this.label6.Size = new System.Drawing.Size(119, 23);
             this.label6.TabIndex = 6;
             this.label6.Text = "Username";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox_Search
             // 
+            this.groupBox_Search.Controls.Add(this.Search_button_search);
+            this.groupBox_Search.Controls.Add(this.Search_listView_Series);
+            this.groupBox_Search.Controls.Add(this.Search_textBox_Term);
             this.groupBox_Search.Controls.Add(this.label7);
             this.groupBox_Search.Location = new System.Drawing.Point(250, 56);
             this.groupBox_Search.Name = "groupBox_Search";
             this.groupBox_Search.Size = new System.Drawing.Size(749, 489);
             this.groupBox_Search.TabIndex = 12;
             this.groupBox_Search.TabStop = false;
-            this.groupBox_Search.Enter += new System.EventHandler(this.groupBox_Search_Enter);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(252, 106);
+            this.label7.Location = new System.Drawing.Point(28, 63);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(278, 24);
+            this.label7.Size = new System.Drawing.Size(85, 24);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Hier kommt die Suche hin";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.Text = "Search:";
             // 
             // groupBox_Favorites
             // 
@@ -466,7 +453,6 @@
             this.groupBox_Favorites.Size = new System.Drawing.Size(749, 489);
             this.groupBox_Favorites.TabIndex = 13;
             this.groupBox_Favorites.TabStop = false;
-            this.groupBox_Favorites.Enter += new System.EventHandler(this.groupBox_Favorites_Enter);
             // 
             // label8
             // 
@@ -477,28 +463,58 @@
             this.label8.Size = new System.Drawing.Size(330, 24);
             this.label8.TabIndex = 0;
             this.label8.Text = "Hier kommen die Favoriten hin";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // groupBox_Home
             // 
-            this.groupBox_Home.Controls.Add(this.label9);
+            this.groupBox_Home.Controls.Add(this.Home_Label_Welcome);
             this.groupBox_Home.Location = new System.Drawing.Point(250, 56);
             this.groupBox_Home.Name = "groupBox_Home";
             this.groupBox_Home.Size = new System.Drawing.Size(749, 489);
             this.groupBox_Home.TabIndex = 14;
             this.groupBox_Home.TabStop = false;
-            this.groupBox_Home.Enter += new System.EventHandler(this.groupBox_Home_Enter);
             // 
-            // label9
+            // Home_Label_Welcome
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(252, 106);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(339, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Hier kommt das Homepanel hin";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.Home_Label_Welcome.AutoSize = true;
+            this.Home_Label_Welcome.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_Label_Welcome.Location = new System.Drawing.Point(10, 63);
+            this.Home_Label_Welcome.MaximumSize = new System.Drawing.Size(700, 0);
+            this.Home_Label_Welcome.Name = "Home_Label_Welcome";
+            this.Home_Label_Welcome.Size = new System.Drawing.Size(0, 24);
+            this.Home_Label_Welcome.TabIndex = 0;
+            // 
+            // Search_textBox_Term
+            // 
+            this.Search_textBox_Term.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_textBox_Term.Location = new System.Drawing.Point(118, 62);
+            this.Search_textBox_Term.Name = "Search_textBox_Term";
+            this.Search_textBox_Term.Size = new System.Drawing.Size(464, 25);
+            this.Search_textBox_Term.TabIndex = 1;
+            // 
+            // Search_listView_Series
+            // 
+            this.Search_listView_Series.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.Search_listView_Series.Location = new System.Drawing.Point(118, 93);
+            this.Search_listView_Series.Name = "Search_listView_Series";
+            this.Search_listView_Series.Size = new System.Drawing.Size(554, 295);
+            this.Search_listView_Series.TabIndex = 2;
+            this.Search_listView_Series.UseCompatibleStateImageBehavior = false;
+            this.Search_listView_Series.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 500;
+            // 
+            // Search_button_search
+            // 
+            this.Search_button_search.Location = new System.Drawing.Point(597, 62);
+            this.Search_button_search.Name = "Search_button_search";
+            this.Search_button_search.Size = new System.Drawing.Size(75, 25);
+            this.Search_button_search.TabIndex = 3;
+            this.Search_button_search.Text = "Search";
+            this.Search_button_search.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -511,11 +527,11 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.groupBox_Search);
             this.Controls.Add(this.groupBox_Login);
             this.Controls.Add(this.groupBox_Register);
             this.Controls.Add(this.groupBox_Home);
             this.Controls.Add(this.groupBox_Favorites);
-            this.Controls.Add(this.groupBox_Search);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -570,7 +586,11 @@
         internal System.Windows.Forms.GroupBox groupBox_Favorites;
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.GroupBox groupBox_Home;
-        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.Label Home_Label_Welcome;
+        private System.Windows.Forms.Button Search_button_search;
+        private System.Windows.Forms.ListView Search_listView_Series;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.TextBox Search_textBox_Term;
     }
 }
 
