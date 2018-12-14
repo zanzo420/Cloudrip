@@ -97,6 +97,8 @@ namespace Cloudrip
                 Invoker.ChangeVisible(mainGUI.sideButton_Search, true);
                 Invoker.ChangeVisible(mainGUI.sideButton_Favorites, true);
                 mainGUI.Change_MainControl(mainGUI.groupBox_Home);
+                mainGUI.RefreshSeriesList();
+                mainGUI.UpdateSeriesList();
             }
             else
             {
@@ -119,7 +121,6 @@ namespace Cloudrip
         }
         private static void Start_User_GUI(string userDump)
         {
-            CustomMessageBox.NewMessageBox(userDump);
             mainGUI.user = Newtonsoft.Json.JsonConvert.DeserializeObject<CloudripUser>(userDump);
             CloudripUser user = mainGUI.user;
             Invoker.SetText(mainGUI.Home_Label_Welcome, 

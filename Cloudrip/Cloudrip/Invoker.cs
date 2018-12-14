@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -42,6 +43,7 @@ namespace Cloudrip
         //ListView
         private delegate void _AddListItem(ListView list, string value, bool subItem = false, string subValue = "", string tag = "");
         private delegate void _AddListItemRaw(ListView list, ListViewItem itm);
+        private delegate void _AddListItems(ListView list, List<ListViewItem> items);
         private delegate void _ClearListView(ListView list);
         private delegate void _UpdateListView(ListView list, bool start = true);
 
@@ -142,6 +144,19 @@ namespace Cloudrip
             {
                 dynamic cntrl = InvokedControl(list, new _AddListItemRaw(AddListItem), list, itm);
                 cntrl.Items.Add(itm);
+            }
+            catch { }
+        }
+        public static void AddListItems(ListView list, List<ListViewItem> items)
+        {
+            try
+            {
+                dynamic cntrl = InvokedControl(list, new _AddListItems(AddListItems), list, items);
+
+                foreach (ListViewItem itm in items)
+                {
+                    cntrl.Items.Add(itm);
+                }
             }
             catch { }
         }

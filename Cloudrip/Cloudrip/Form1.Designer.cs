@@ -55,15 +55,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox_Search = new System.Windows.Forms.GroupBox();
+            this.tabControl_Seasons = new System.Windows.Forms.TabControl();
+            this.Search_button_search = new System.Windows.Forms.Button();
+            this.Search_listView_Series = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Search_textBox_Term = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox_Favorites = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.Home_Label_Welcome = new System.Windows.Forms.Label();
-            this.Search_textBox_Term = new System.Windows.Forms.TextBox();
-            this.Search_listView_Series = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Search_button_search = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             this.groupBox_Register.SuspendLayout();
             this.groupBox_Login.SuspendLayout();
@@ -425,9 +427,11 @@
             // 
             // groupBox_Search
             // 
+            this.groupBox_Search.Controls.Add(this.tabControl_Seasons);
             this.groupBox_Search.Controls.Add(this.Search_button_search);
             this.groupBox_Search.Controls.Add(this.Search_listView_Series);
             this.groupBox_Search.Controls.Add(this.Search_textBox_Term);
+            this.groupBox_Search.Controls.Add(this.label9);
             this.groupBox_Search.Controls.Add(this.label7);
             this.groupBox_Search.Location = new System.Drawing.Point(250, 56);
             this.groupBox_Search.Name = "groupBox_Search";
@@ -435,15 +439,70 @@
             this.groupBox_Search.TabIndex = 12;
             this.groupBox_Search.TabStop = false;
             // 
+            // tabControl_Seasons
+            // 
+            this.tabControl_Seasons.Location = new System.Drawing.Point(140, 310);
+            this.tabControl_Seasons.Name = "tabControl_Seasons";
+            this.tabControl_Seasons.SelectedIndex = 0;
+            this.tabControl_Seasons.Size = new System.Drawing.Size(554, 173);
+            this.tabControl_Seasons.TabIndex = 4;
+            // 
+            // Search_button_search
+            // 
+            this.Search_button_search.Location = new System.Drawing.Point(619, 62);
+            this.Search_button_search.Name = "Search_button_search";
+            this.Search_button_search.Size = new System.Drawing.Size(75, 25);
+            this.Search_button_search.TabIndex = 3;
+            this.Search_button_search.Text = "Search";
+            this.Search_button_search.UseVisualStyleBackColor = true;
+            this.Search_button_search.Click += new System.EventHandler(this.Search_button_search_Click);
+            // 
+            // Search_listView_Series
+            // 
+            this.Search_listView_Series.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.Search_listView_Series.FullRowSelect = true;
+            this.Search_listView_Series.Location = new System.Drawing.Point(140, 93);
+            this.Search_listView_Series.MultiSelect = false;
+            this.Search_listView_Series.Name = "Search_listView_Series";
+            this.Search_listView_Series.Size = new System.Drawing.Size(554, 211);
+            this.Search_listView_Series.TabIndex = 2;
+            this.Search_listView_Series.UseCompatibleStateImageBehavior = false;
+            this.Search_listView_Series.View = System.Windows.Forms.View.Details;
+            this.Search_listView_Series.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Search_listView_Series_MouseDoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 550;
+            // 
+            // Search_textBox_Term
+            // 
+            this.Search_textBox_Term.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_textBox_Term.Location = new System.Drawing.Point(140, 62);
+            this.Search_textBox_Term.Name = "Search_textBox_Term";
+            this.Search_textBox_Term.Size = new System.Drawing.Size(464, 25);
+            this.Search_textBox_Term.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(44, 310);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 24);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Seasons";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 63);
+            this.label7.Location = new System.Drawing.Point(57, 63);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 24);
+            this.label7.Size = new System.Drawing.Size(78, 24);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Search:";
+            this.label7.Text = "Search";
             // 
             // groupBox_Favorites
             // 
@@ -483,39 +542,6 @@
             this.Home_Label_Welcome.Size = new System.Drawing.Size(0, 24);
             this.Home_Label_Welcome.TabIndex = 0;
             // 
-            // Search_textBox_Term
-            // 
-            this.Search_textBox_Term.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_textBox_Term.Location = new System.Drawing.Point(118, 62);
-            this.Search_textBox_Term.Name = "Search_textBox_Term";
-            this.Search_textBox_Term.Size = new System.Drawing.Size(464, 25);
-            this.Search_textBox_Term.TabIndex = 1;
-            // 
-            // Search_listView_Series
-            // 
-            this.Search_listView_Series.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.Search_listView_Series.Location = new System.Drawing.Point(118, 93);
-            this.Search_listView_Series.Name = "Search_listView_Series";
-            this.Search_listView_Series.Size = new System.Drawing.Size(554, 295);
-            this.Search_listView_Series.TabIndex = 2;
-            this.Search_listView_Series.UseCompatibleStateImageBehavior = false;
-            this.Search_listView_Series.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 500;
-            // 
-            // Search_button_search
-            // 
-            this.Search_button_search.Location = new System.Drawing.Point(597, 62);
-            this.Search_button_search.Name = "Search_button_search";
-            this.Search_button_search.Size = new System.Drawing.Size(75, 25);
-            this.Search_button_search.TabIndex = 3;
-            this.Search_button_search.Text = "Search";
-            this.Search_button_search.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -527,11 +553,11 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.groupBox_Search);
             this.Controls.Add(this.groupBox_Login);
             this.Controls.Add(this.groupBox_Register);
             this.Controls.Add(this.groupBox_Home);
             this.Controls.Add(this.groupBox_Favorites);
+            this.Controls.Add(this.groupBox_Search);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -591,6 +617,8 @@
         private System.Windows.Forms.ListView Search_listView_Series;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.TextBox Search_textBox_Term;
+        internal System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabControl tabControl_Seasons;
     }
 }
 
